@@ -1,37 +1,41 @@
-import React, { useEffect, useState } from "react";
-import {
-  ColumnDirective,
-  ColumnsDirective,
-  GridComponent,
-} from "@syncfusion/ej2-react-grids";
+import React, { useState } from "react";
 import "./App.css";
+import Homepage from "./components/Homepage";
+import Users from "./components/Users";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import Header from "./components/Header";
+import Login from "./components/Login";
 
 function App() {
-  const [data, setData] = useState();
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos")
-      .then((response) => response.json())
-      .then((json) => setData(json));
-  }, []);
-
-  console.log("data: ", data);
+  const [user, setUser] = useState(window.sessionStorage.getItem("user"));
 
   return (
-    <div className="App">
-      <GridComponent dataSource={data}>
-        <ColumnsDirective>
-          <ColumnDirective
-            field="id"
-            headerText="Id"
-            max-width="100"
-            textAlign="Left"
+    <Router>
+      <div className="App">
+        <Header user={user} setUser={setUser} />
+
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() =>
+              user ? <Redirect to="/homepage" /> : <Login setUser={setUser} />
+            }
           />
-          <ColumnDirective field="completed" headerText="Completed" />
-          <ColumnDirective field="title" headerText="Title" textAlign="Left" />
-        </ColumnsDirective>
-      </GridComponent>
-    </div>
+          <Route
+            exact
+            path="/homepage"
+            render={() => <Homepage user={user} />}
+          />
+          <Route path="/users" component={Users} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

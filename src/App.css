@@ -1,48 +1,75 @@
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-grids/styles/material.css";
-
+body,
+html,
+#root,
 .App {
-  text-align: center;
+  height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+}
+.login input {
+  display: block;
+  margin: 20px auto;
+  height: 31px;
+  padding-left: 5px;
+}
+.login button {
+  width: 100px;
+  padding: 7px;
+  font-weight: bold;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+header {
+  padding: 20px;
+  border-bottom: 1px solid #cacaca;
+  display: flex;
+  justify-content: space-between;
+}
+.user-link-logout {
+  display: flex;
+  justify-content: space-between;
+  width: 175px;
 }
 
-.App-link {
-  color: #61dafb;
+#time-form {
+  display: flex;
+  margin-top: 100px;
+  padding: 0 50px;
+  justify-content: space-between;
+  max-width: 50%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#time-form div {
+  min-width: 300px;
+}
+.save-btn {
+  align-items: flex-end;
+  display: flex;
+}
+.loged-time-container {
+  max-width: 50%;
+  margin: 50px;
+}
+.loged-time-container .header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+.loged-time-container .header div {
+  min-width: 430px;
+}
+.loged-time-container .entry {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cacaca;
+  padding-top: 10px;
+}
+.loged-time-container .entry div {
+  min-width: 430px;
 }
