@@ -1,0 +1,78 @@
+body,
+html,
+#root,
+.App {
+  height: 100%;
+}
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.login input {
+  display: block;
+  margin: 20px auto;
+  height: 31px;
+  padding-left: 5px;
+}
+.login button {
+  width: 100px;
+  padding: 7px;
+  font-weight: bold;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+header {
+  padding: 20px;
+  border-bottom: 1px solid #cacaca;
+  display: flex;
+  justify-content: space-between;
+}
+.user-link-logout {
+  display: flex;
+  justify-content: space-between;
+  width: 175px;
+}
+
+#time-form {
+  display: flex;
+  margin-top: 100px;
+  padding: 0 50px;
+  justify-content: space-between;
+  max-width: 50%;
+}
+#time-form div {
+  min-width: 300px;
+}
+.save-btn {
+  align-items: flex-end;
+  display: flex;
+}
+.loged-time-container {
+  max-width: 50%;
+  margin: 50px;
+}
+.loged-time-container .header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+.loged-time-container .header div {
+  min-width: 430px;
+}
+.loged-time-container .entry {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cacaca;
+  padding-top: 10px;
+}
+.loged-time-container .entry div {
+  min-width: 430px;
+}
+.logout {
+  cursor: pointer;
+}
