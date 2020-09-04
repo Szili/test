@@ -73,3 +73,6 @@ header {
 .loged-time-container .entry div {
   min-width: 430px;
 }
+.logout{
+  cursor:pointer
+}
